@@ -6,11 +6,12 @@ function Experience() {
     const [selected, setSelected] = useState(0)
 
     useEffect(() => {
-        const underline = document.querySelector(".underline");
+        const underline = document.querySelector(".underline") as HTMLElement; 
         if (underline) {
             underline.style.top = `${selected * 2.5}rem`;
         }
     }, [selected]);
+    
     
 
     
