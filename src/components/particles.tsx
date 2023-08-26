@@ -97,7 +97,7 @@ const ParticleCanvas: React.FC = () => {
     };
   }, []);
 
-  const canvasStyle = {
+  const canvasStyle: React.CSSProperties = {
     position: 'fixed',
     top: 0,
     left: 0,
