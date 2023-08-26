@@ -13,7 +13,7 @@ import { useState } from 'react';
 import Loader from '@/components/Loader';
 
 function Index() {
-  const canvasContainerStyle = {
+  const canvasContainerStyle: React.CSSProperties = {
     position: 'fixed',
     top: 0,
     left: 0,
@@ -21,6 +21,7 @@ function Index() {
     height: '100vh',
     zIndex: -1,
   };
+  
 
   const [isLoading, setIsLoading] = useState(true);
   const[showContent, setShowContent] = useState(false);
