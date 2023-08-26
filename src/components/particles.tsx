@@ -1,6 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 
-const ParticleCanvas = () => {
+interface Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  update(): void;
+  draw(): void;
+}
+
+const ParticleCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -10,12 +20,12 @@ const ParticleCanvas = () => {
     const context = canvas.getContext('2d');
     if (!context) return;
 
-    let particles: Particle[] = [];
+    const particles: Particle[] = [];
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    class Particle {
+    class Particle implements Particle {
       x: number;
       y: number;
       size: number;
@@ -72,7 +82,7 @@ const ParticleCanvas = () => {
       if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      particles = [];
+      particles.length = 0;
       createParticles();
     };
 
@@ -91,7 +101,7 @@ const ParticleCanvas = () => {
     height: '100vh',
     zIndex: -1,
   };
-  
+
   return <canvas ref={canvasRef} className="particle-canvas" style={canvasStyle} />;
 };
 
