@@ -26,11 +26,11 @@ const ParticleCanvas: React.FC = () => {
     canvas.height = window.innerHeight;
 
     class Particle implements Particle {
-      x: number;
-      y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
+      x: number = 0;
+      y: number = 0;
+      size: number = 0;
+      speedX: number = 0;
+      speedY: number = 0;
 
       constructor() {
         if (!canvas) return;
