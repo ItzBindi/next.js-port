@@ -39,9 +39,9 @@ function Index() {
       {
         showContent && (
           <>
-      <div style={canvasContainerStyle}>
+      {/* <div style={canvasContainerStyle}>
         <ParticleCanvas />
-      </div>
+      </div> */}
       <div className='content-container'>
         <Navbar />
         <SocialIcons />
