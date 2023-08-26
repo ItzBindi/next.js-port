@@ -77,11 +77,12 @@ function Navbar() {
         >
           {responsiveNavVisible ? (
             <CgClose
-              onClick={(e) => {
-                e.stopPropagation();
-                setResponsiveNavVisible(false);
-              }}
-            />
+            onClick={(e: React.MouseEvent) => {
+              e.stopPropagation();
+              setResponsiveNavVisible(false);
+            }}
+          />
+          
           ) : (
             <GiHamburgerMenu
               onClick={(e) => {
