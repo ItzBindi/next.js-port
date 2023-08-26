@@ -1,5 +1,5 @@
 import React from 'react';
-import ParticleCanvas from '@/components/particles';
+// import ParticleCanvas from '@/components/particles';
 import Navbar from '@/sections/Navbar';
 import SocialIcons from '@/components/SocialIcons';
 import Email from '@/components/Email';
