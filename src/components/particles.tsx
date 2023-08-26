@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 
 const ParticleCanvas = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return; // Ensure that canvas is not null
+    if (!canvas) return;
 
     const context = canvas.getContext('2d');
-    if (!context) return; // Ensure that context is not null
+    if (!context) return;
 
-    let particles = [];
+    let particles: Particle[] = [];
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -62,7 +62,7 @@ const ParticleCanvas = () => {
     animate();
 
     const handleResize = () => {
-      if (!canvas) return; // Ensure that canvas is not null
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       particles = [];
