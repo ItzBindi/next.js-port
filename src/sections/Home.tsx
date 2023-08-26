@@ -51,7 +51,7 @@ function Home() {
           delay: 1.35,
         }}
         >
-            Hey there! 🚀 I'm a software engineer extraordinaire who's all about whipping up incredible digital experiences. Right now, I'm all in on cooking up products that are super easy to use and totally catered to what users want. Your team sounds like a blast – I'd absolutely love to jump on board! 🙌
+            Hey there! 🚀 I am a software engineer extraordinaire who is all about whipping up incredible digital experiences. Right now, I am all in on cooking up products that are super easy to use and totally catered to what users want. Your team sounds like a blast – I wouldd absolutely love to jump on board! 🙌
         </motion.p>
         <motion.div 
         className="home-button"

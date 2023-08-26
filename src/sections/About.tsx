@@ -22,7 +22,7 @@ function About() {
                 <div className="about-grid-info">
                     <p className="about-grid-info-text">
                         Hey, my name is Suraj Nair but I go by Bindi! I was born, raised and still live in the suburbs of Chicago
-                        I have successfully completed Northwestern University's intensive coding bootcamp, equipping me with the
+                        I have successfully completed Northwestern Universitys intensive coding bootcamp, equipping me with the
                         necessary skills to thrive in the development field. My dedication, reliability, and adeptness at both
                         independent and team-oriented work make me a valuable asset. I approach challenges with enthusiasm,
                         continuously seeking opportunities for growth and improvement.
@@ -33,7 +33,7 @@ function About() {
                         Express, MongoDB, MySQL, and more. I am currently seeking a full-time position as a software engineer!
                     </p>
                     <p className="about-grid-info-text">
-                        Here are a few technologies I've been working with recently:
+                        Here are a few technologies I have been working with recently:
                     </p>
                     <ul className="about-grid-info-list">
                             <li className="about-grid-info-list-item">React</li>
