@@ -5,7 +5,11 @@ const ParticleCanvas = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return; // Ensure that canvas is not null
+
     const context = canvas.getContext('2d');
+    if (!context) return; // Ensure that context is not null
+
     let particles = [];
 
     canvas.width = window.innerWidth;
@@ -57,12 +61,19 @@ const ParticleCanvas = () => {
     createParticles();
     animate();
 
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
+      if (!canvas) return; // Ensure that canvas is not null
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       particles = [];
       createParticles();
-    });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const canvasStyle = {
