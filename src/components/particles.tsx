@@ -7,7 +7,7 @@ interface Particle {
   speedX: number;
   speedY: number;
   update(): void;
-  draw(): void;
+  draw(context: CanvasRenderingContext2D | null): void;
 }
 
 const ParticleCanvas: React.FC = () => {
@@ -54,7 +54,8 @@ const ParticleCanvas: React.FC = () => {
         if (this.size > 0.2) this.size -= 0.1;
       }
 
-      draw() {
+      draw(context: CanvasRenderingContext2D | null) {
+        if (!context) return;
         context.fillStyle = 'white';
         context.beginPath();
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -73,7 +74,7 @@ const ParticleCanvas: React.FC = () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((particle) => {
         particle.update();
-        particle.draw();
+        particle.draw(context);
       });
       requestAnimationFrame(animate);
     }
