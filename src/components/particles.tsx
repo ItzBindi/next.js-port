@@ -16,6 +16,12 @@ const ParticleCanvas = () => {
     canvas.height = window.innerHeight;
 
     class Particle {
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -23,11 +29,11 @@ const ParticleCanvas = () => {
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
       }
+
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // Constrain the particle's position within the canvas bounds
         if (this.x > canvas.width) this.x = 0;
         if (this.x < 0) this.x = canvas.width;
         if (this.y > canvas.height) this.y = 0;
@@ -35,6 +41,7 @@ const ParticleCanvas = () => {
 
         if (this.size > 0.2) this.size -= 0.1;
       }
+
       draw() {
         context.fillStyle = 'white';
         context.beginPath();
