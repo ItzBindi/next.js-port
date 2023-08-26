@@ -42,6 +42,7 @@ const ParticleCanvas: React.FC = () => {
       }
 
       update() {
+        if (!canvas) return;
         this.x += this.speedX;
         this.y += this.speedY;
 
@@ -68,6 +69,7 @@ const ParticleCanvas: React.FC = () => {
     }
 
     function animate() {
+      if (!canvas) return;
       context.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((particle) => {
         particle.update();
