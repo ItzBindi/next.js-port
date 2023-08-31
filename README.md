@@ -25,6 +25,11 @@ A modern and updated version of my portfolio built with Next.js and TypeScript.
 - Blog section for sharing insights
 
 
+## Screenshots
+![screenshot-2023-08-31-09-20-53](https://github.com/ItzBindi/next.js-port/assets/82546293/af719a25-0b03-40e0-8064-672cb7200013)
+
+
+
 
 ## Demo
 
